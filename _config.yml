@@ -1,0 +1,8 @@
+essay-images: /sites/images
+
+defaults:
+  -
+    scope:
+      path: "sites"
+    values:
+      layout: "single-col"
