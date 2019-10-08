@@ -11,19 +11,25 @@
   <link rel="icon" href="{{site.baseurl}}/favicon.ico">
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <!-- Slick carousel CSS -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-  <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 
+  <!-- core juxtapose.js CSS -->
   <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 
+  <!-- jquery UI CSS -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- bigfoot.js (for fancy non-footnotes with auto numbering) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bigfoot/2.1.4/bigfoot-number.css" >
 
+  <!-- default CSS-->
   <link href="{{site.baseurl}}/assets/css/main.css" rel="stylesheet">
-  <link href="{{site.baseurl}}/assets/css/essay.css" rel="stylesheet">
+
+  <!-- if the YAML has a page: somepage.css parameter, load it -->
   {% if page.css %}
   <link href="{{site.baseurl}}/assets/css/{{page.css}}" rel="stylesheet">
   {% endif %}

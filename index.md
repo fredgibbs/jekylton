@@ -1,14 +1,16 @@
 ---
 title: Getting Started
-layout: single-col
+layout: base
 date: 2019-10-03
 ---
 
 {% include jumbotron.html
   title="Jekylton"
-  caption="Henry Jackson, Indian Territory with Parts of Neighboring States and Territories (New York: J. Bien, 1869). Courtesy of David Rumsey Historical Map Collection"
-  image="sites/images/indian-territory.jpg"
-  text="A Collaboration Between the National Park Service and the University of New Mexico's Department of History"
+  caption=""
+  image=""
+  text="Use this site skeleton as a basis for your digital history website "
 %}
 
 This is your home page!
+
+For more information about how to add features to your pages, see the [loading images](guides/loading-images) and [code](guides/code) guides.

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include header-default.html %}
+
+  <body>
+
+    {% include nav.html %}
+
+    {% include bottom-js.html %}
+
+    <script src="{{site.baseurl}}/assets/js/sheetrock.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/directory.js"></script>
+
+
+    <!--Sheetrock expects to be outputting HTML for each row, so here's a place to put it.-->
+    <div id="sheetrock"></div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="cards"></div>
+          </div>
+        </div>
+      </div>
+
+      </div> <!-- /main -->
+
+
+      <script>
+
+      $( function() {
+        getPages(function(pages) {
+            $.each(pages, createCard);
+            console.log("done looping through pages.");
+            //map.addLayer(featureGroup);
+          }
+        );
+      });
+      </script>
+
+    {% if jekyll.environment == 'production' and site.analytics_id %}{% include google_analytics.html %}{% endif %}
+
+  </body>
+</html>

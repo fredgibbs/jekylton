@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-{% include header-default.html %}
+  {% include header-default.html %}
 
-<body>
+  <body>
 
-{% include nav.html %}
+    {% include nav.html %}
 
-<main class="main">
-  {{ content }}
-</main> <!-- /main -->
+    <main class="container main">
+      {{ content }}
+    </main> <!-- /main -->
 
 
-{% if jekyll.environment == 'production' and site.analytics_id %}{% include google_analytics.html %}{% endif %}
+    {% if jekyll.environment == 'production' and site.analytics_id %}{% include google_analytics.html %}{% endif %}
 
-{% include bottom-js.html %}
+    {% include bottom-js.html %}
 
-</body>
+  </body>
 </html>
