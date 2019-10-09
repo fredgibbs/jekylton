@@ -32,7 +32,7 @@ You will need to copy the URL of where you got the image so that you paste in in
 When you find an image you like, download it to your computer. Frequently, images you download will have long and weird filenames that make it difficult to use, even within our repository. You should rename the image so it has a more human readable name that will make it easier to find later. Use only lowercase and hyphens (not underscores or spaces) in your filename.
 
 ### Put Images into our Repository
-Bring up a browser window of our [intro-guide repository](https://github.com/unm-historiography/intro-guide). Click on the `essays` folder, then the `images` folder. Drag and drop the file(s) you downloaded and renamed in the previous step.
+Bring up a browser window of the website repository. Click on the `essays` folder, then the `images` folder. Drag and drop the file(s) you downloaded and renamed in the previous step.
 
 It is much faster to drag and drop multiple files at once, since after you commit a new image, you end up at the repository home page (not the images folder).
 
@@ -47,11 +47,10 @@ Again, all you need to do to get images on your essay page is to copy and paste 
 
 ### Edit parameters
 The parameters (class, width, caption) are self explanatory, but note that:
-- `image-url` is the ONLY the filename of the image, with appropriate extension (`.jpg`, `.png`, `.jpeg`, etc).
-  - Your filename MUST NOT start with `images/` as we saw originally.
-- `source-url` is the URL of wherever you got the image.
+- `image-url` is the ONLY the filename of the image, with appropriate extension (`.jpg`, `.JPG`, `.png`, `.jpeg`, etc).
+- BE CAREFUL that the actual name of your file and what's in the code MATCHES EXACTLY.
+- `source-url` is the URL of wherever you got the image so readers can find the original source.
 
-Make sure what's in the code and your file name as it appears in the repository MATCH EXACTLY.
 
 ### Double check and commit your changes
 Double check that you have:
