@@ -1,83 +1,99 @@
 ---
 layout: base
 title: Getting Starting with GitHub Pages
-subtitle: A preliminary guide to sustainable and extensible digital history websites
+subtitle: A preliminary guide to sustainable and extensible project websites
 author: Fred Gibbs
 date: 2019-10-03
 ---
 
+# {{page.title}}
+
+## {{page.subtitle}}
+
+<!--
+### Table of Contents
 * TOC
 {:toc}
-
+-->
 
 ## What is GitHub Pages?
-- Makes static site pages
+- GitHub Pages is basically a free service that takes a set of files and makes them into a website. It does this with an application called Jekyll. Etc.
 
 ## Why GitHub Pages?
 - free, accessible, stable, version control, transparency
 
+## How to use this guide
+These instructions explain how a GitHub Pages site works. It describes files and folders in your repository as well as how individual files work. It will be useful to have these instructions open in a separate browser window as you view and edit files on your website.
 
 ## Build a website in 10 minutes
-
-### First steps
 - Create an account at [GitHub](http://github.com/register)
-- Rather than create everything from scratch, start with a basic set of core files. Use jekylton as a template.
-- Go to the [jekylton repository](http://github.com/fredgibbs/jekylton).
+- Rather than create everything from scratch, start with a basic set of core files. Use Jekylton (this site) as a template. Go to the [jekylton repository](http://github.com/fredgibbs/jekylton)
 - Click the green "Use this Template" button
-- Name your repository. I'd recommend `jekylton` for now. You can always rename it later or delete it and start over.
+- Name your repository. I'd recommend `jekylton` for now. You can always rename it later or delete it and start over
 - Go into the settings menu (the gear menu on the right of the top nav bar)
-- Scroll down to section titled GitHub Pages (the penultimate section)
-  - Select / from master branch
-  - Note the URL that appears there in the form of http://USERNAME.github.io/jekylton. Replace USERNAME with whatever your GitHub username is, like http://fwgibbs.github.io/jeklyton
-  - Go to that URL, and you'll probably get a Page Not Found error.
-  - Wait a minute for GitHub to build your site, and refresh the page.
+- Scroll down to section titled "GitHub Pages" (the penultimate section)
+- Select / from master branch
+- Note the URL that appears there in the form of http://USERNAME.github.io/jekylton. Replace USERNAME with  your GitHub username, like http://fwgibbs.github.io/jeklyton
+- Click on that URL, and you'll likely get a Page Not Found error.
+- Wait a minute for GitHub to build your site, and refresh the page (Ctrl or Cmd R).
 
 You've made a website!
 
+---
+
+## Anatomy of a Page
+To understand the basics of how pages work, let's investigate the `index.md` file.
+
+### YAML headers
+The top of the page looks like:
+
+``` markdown
+---
+title: Getting Started
+layout: base
+date: 2019-10-03
+---
+```
+
+All pages must have a similar metadata block at the very top, with the title customized for each page. This is called a YAML header. For now, it is enough to know that this block of metadata tells GitHub Pages that it should be part of your website. **Be sure you have the 3 hyphens `---` before and after your metadata on their own lines**.
+
+The index page uses the `base` layout, as do all pages except the directory page; layouts will be discussed in the next section.
+
+You'll notice that you have a few pages in the root directory of your repository, like `credits` and `directory`. They work the same way.
+
+### Markdown
+One of the great features of GitHub Pages is that it allows you to write pages in Markdown rather than HTML.
+
+<<comparison>>
+
+If you are new to Markdown, complete this [Markdown tutorial](https://www.markdowntutorial.com/). If you need syntax help, check out this [cheat sheet](https://www.markdownguide.org/cheat-sheet).
+
+#### Previewing Markdown
+If you want to write online and preview your Markdown text as you write, use [Dillinger](https://dillinger.io/). It saves your work as you go. When you are done writing, you can simply copy and paste your text from Dillinger into the edit window on GitHub.
+
+---
 
 ## Basic Site Components
-Let's see what's in the repository
+Now that we've looked at a page, let's see what else is in the repository. Go to your own Jeklyton repository at http://USERNAME.github.io/jekylton (again, replacing USERNAME with your GitHub username). All of the files are important in their own way, but we're going to focus on the folders and files that most directly create our website.
 
 ### `_includes` directory
 This directory hold files that are typically small bits of code that appear on more than one page, like a nav bar or footer. This way, if you want to change the footer on all your site pages, you can change it in just one spot.
 
 ### `_layouts` directory
-This directory
+This directory provides the basic layouts for different kinds of pages. We want all our pages to have well-formed HTML, which means they need to start with `<!DOCTYPE html>`. So you see that's the first line of code on the
+
+These pages will include bits of code from the `_includes` directory to assemble a complete webpage.  
+
 
 ### `essays` directory
-This directory could be named anything--it's just a place to put separate essays. You might have many of these directories for essays on different topics, like `ads`, `newspapers`, `historic sites`, `campus-buildings`, etc.
+This directory could be named anything--it's just a place to put separate essays. You might have many of these directories for essays on different topics, like `ads`, `newspapers`, `historic sites`, `campus buildings`, etc.
 
-### credits.md page
-A place to list all your contributors. Or you can delete it and take all the credit.
+###
 
-### directory.md page
-This is a special page
-
-### index page
-This is the homepage of your site.
 
 ---
 
-## Page components
 
-### YAML headers
-All essays must have the following metadata at the top of the page, with the values customized to your own page. **Be sure you have the 3 hyphens `---` before and after your metadata on their own lines**. The top of your essay page should look like:
-
-``` markdown
----
-title: Mesa Vista Hall
-author: Fred Gibbs
-date: 2019-09-13
----
-```
-
-### Markdown
-One of the great features of GitHub Pages is that it allows you to write pages in Markdown rather than HTML. If you are new to Markdown, complete this [Markdown tutorial](https://www.markdowntutorial.com/). If you need syntax help, check out this [cheat sheet](https://www.markdownguide.org/cheat-sheet).
-
-#### Dillinger
-If you want to write online and preview your Markdown text as you write, use [Dillinger](https://dillinger.io/). It saves your work as you go. When you are done writing, you can get your post into GitHub in two ways:
-
-One is as described above (Writing on GitHub), but you'll simply copy and paste your text from Dillinger into the edit window on GitHub.
 
 
 ---
@@ -142,9 +158,9 @@ These instructions outline exactly what to do. It looks like a lot of steps, but
 
 #### Mac
 These instructions are based on [these]()
-- `xcode-select --install`
+```xcode-select --install```
 
-- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
 A program called Homebrew helps us install some required software very easily.
 
 - `brew install ruby`
