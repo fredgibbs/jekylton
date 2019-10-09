@@ -6,9 +6,9 @@ date: 2019-10-03
 
 {% include jumbotron.html
   title="Jekylton"
-  caption=""
-  image=""
   text="Use this site skeleton as a basis for your digital history website "
+  caption=""
+  image="/assets/images/tent-rocks.jpg"
 %}
 
 This is your home page!

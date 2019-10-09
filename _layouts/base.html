@@ -7,9 +7,9 @@
 
     {% include nav.html %}
 
-    <main class="container main">
+    <div class="container main">
       {{ content }}
-    </main> <!-- /main -->
+    </div> <!-- /main -->
 
 
     {% if jekyll.environment == 'production' and site.analytics_id %}{% include google_analytics.html %}{% endif %}
