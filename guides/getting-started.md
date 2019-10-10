@@ -17,32 +17,41 @@ date: 2019-10-03
 -->
 
 ## What is GitHub Pages?
-- GitHub Pages is basically a free service that takes a set of files and makes them into a website. It does this with an application called Jekyll. Etc.
+- [GitHub Pages](https://pages.github.com/) is basically a free service that takes a set of files and makes them into a website. Need better introduction to terms, etc.
 
 ## Why GitHub Pages?
-- free, accessible, stable, version control, transparency
+- It's free, accessible, stable, excels at version control.
 
 ## How to use this guide
 These instructions explain how a GitHub Pages site works. It describes files and folders in your repository as well as how individual files work. It will be useful to have these instructions open in a separate browser window as you view and edit files on your website.
 
 ## Build a website in 10 minutes
-- Create an account at [GitHub](http://github.com/register)
-- Rather than create everything from scratch, start with a basic set of core files. Use Jekylton (this site) as a template. Go to the [jekylton repository](http://github.com/fredgibbs/jekylton)
+- Create an account at [GitHub](https://github.com/join)
+- You need to create a repository for your website, but rather than create everything from scratch, start with a basic set of core files. Use Jekylton (this site) as a template---meaning you can automatically copy all the files on this site into a new repository tied to your new GitHub account.
+- Go to the [jekylton repository](http://github.com/fredgibbs/jekylton)
 - Click the green "Use this Template" button
-- Name your repository. I'd recommend `jekylton` for now. You can always rename it later or delete it and start over
+- Name your repository. I'd recommend `jekylton` for now to keep everything consistent. You can always rename it later or delete it and start over
 - Go into the settings menu (the gear menu on the right of the top nav bar)
 - Scroll down to section titled "GitHub Pages" (the penultimate section)
-- Select / from master branch
-- Note the URL that appears there in the form of http://USERNAME.github.io/jekylton. Replace USERNAME with  your GitHub username, like http://fwgibbs.github.io/jeklyton
-- Click on that URL, and you'll likely get a Page Not Found error.
+- Select `master` branch
+- Note the URL that appears there in the form of http://USERNAME.github.io/jekylton. Replace USERNAME with your GitHub username, like http://fwgibbs.github.io/jeklyton
+- Click on that URL immediately, and you'll likely get a Page Not Found error.
 - Wait a minute for GitHub to build your site, and refresh the page (Ctrl or Cmd R).
 
-You've made a website!
+You now have a working website to build from!
+
+### Bookmark your website and repository
+There are two web addresses (URLs) that you'll be using throughout this guide, so let's get our terminology straight. You might want to bookmark them for easy access---they are similar enough that they are easy to mix up.
+
+- your website: https://USERNAME.github.io/jekylton.
+- your repository: https://github.com/USERNAME/REPOSITORY.
+
+Replace USERNAME with your GitHub username, and REPOSITORY with the name of the repository into which you copied the Jekylton site (which you might have kept as jekylton). For example, the Jekylton repository is at: https://github.com/fredgibbs/jekylton.
 
 ---
 
 ## Anatomy of a Page
-To understand the basics of how pages work, let's investigate the `index.md` file.
+To understand the basics of how pages work, let's investigate the `index.md` file. Go to your repository (not website), and click on the link for the index.md file to view its contents.
 
 ### YAML headers
 The top of the page looks like:
@@ -59,7 +68,7 @@ All pages must have a similar metadata block at the very top, with the title cus
 
 The index page uses the `base` layout, as do all pages except the directory page; layouts will be discussed in the next section.
 
-You'll notice that you have a few pages in the root directory of your repository, like `credits` and `directory`. They work the same way.
+You'll notice that you have a few sample pages in the root directory of your repository, like `credits` and `directory`. They work the same way.
 
 ### Markdown
 One of the great features of GitHub Pages is that it allows you to write pages in Markdown rather than HTML.
@@ -87,13 +96,6 @@ These pages will include bits of code from the `_includes` directory to assemble
 
 ### `essays` directory
 This directory could be named anything--it's just a place to put separate essays. You might have many of these directories for essays on different topics, like `ads`, `newspapers`, `historic sites`, `campus buildings`, etc.
-
-###
-
-
----
-
-
 
 
 ---
