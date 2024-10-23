@@ -4,3 +4,5 @@ This repository provides a minimal Jekyll website skeleton and extensive documen
 The key difference between this and most other Jekyll themes is that it focuses on modular components for building individual pages rather than blogging.
 
 The `_includes` folder has a few base code snippets.
+
+test update
